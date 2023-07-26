@@ -1,0 +1,196 @@
+/* omrSheet.css */
+.a4-container {
+  width: 210mm;
+  height: 297mm;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: white;
+  font-size: small;
+  font-weight: 600;
+}
+.legal-container {
+  width: 215.9mm;
+  height: 355.6mm;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: white;
+  font-size: small;
+  font-weight: 600;
+}
+.legal-sheet-container {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  justify-content: space-evenly;
+  margin-top: 2rem;
+}
+
+.legal-column {
+  flex: 1 1 14.2857%;
+  max-width: calc(14.2857% - 10px);
+  margin-bottom: 20px;
+}
+
+.omr-sheet-container {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.omr-column {
+  flex: 1 1 20%;
+  /* Adjust the width of each column (20% = 5 columns) */
+  max-width: calc(20% - 15px);
+  /* Set a maximum width to leave some space between columns */
+  margin-bottom: 20px;
+  /* Add some space between the columns */
+}
+
+.omr-question {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  /* Reduce the space between questions */
+}
+
+.omr-question-number {
+  width: 20px;
+  /* Make the question number section smaller */
+  margin-right: 10px;
+  /* Reduce the space between question number and options */
+}
+
+.omr-option {
+  width: 17px;
+  height: 17px;
+
+  border: 1px solid black;
+  border-radius: 50%;
+  margin-right: 3px;
+  /* Reduce the space between options */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  /* Reduce the font size of alphabets */
+}
+
+.name-signature {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.signature {
+  margin-left: auto;
+}
+.name-signature {
+  padding: 0 3rem;
+}
+
+.main {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+}
+
+.parent-container {
+  width: 50%;
+  align-items: end;
+  background-color: hwb(78 71% 4%);
+}
+
+.fields {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #1d8b99;
+  width: 10%;
+
+  /* Adjust the alignment of the fields and center them */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.fields h1 {
+  margin-top: -9rem;
+  font-weight: 800;
+  font-size: 80px;
+}
+.fields > div {
+  width: 100%;
+}
+
+.fields label {
+  font-weight: 600;
+  font-size: 40px;
+  display: block;
+  margin-bottom: 2rem;
+  margin-left: 9rem;
+  text-align: left;
+  margin-right: 2rem;
+}
+
+.fields input,
+.fields select {
+  margin-left: 2rem;
+  align-items: end;
+  width: 15%;
+  text-align: center;
+  height: 10%; /* Adjust the height of the input fields */
+  padding: 8px 4px; /* Add some padding inside the input fields */
+  border: 4px solid black;
+  border-radius: 4px;
+  background-color: white;
+  font-weight: 300;
+  font-size: 20px; /* Increase the font size for better visibility */
+  font-family: Arial, sans-serif; /* Specify a font family */
+}
+
+.fields button {
+  padding: 12px 24px; /* Increase the padding to make the button more prominent */
+  background-color: #054380;
+  color: white;
+  border: #01060b;
+  border-radius: 4px;
+  font-weight: 400;
+  height: 20%;
+  cursor: pointer;
+  font-size: 20px; /* Increase the font size for better visibility */
+  font-family: Arial, sans-serif; /* Specify a font family */
+  transition: background-color 0.3s;
+}
+
+.fields button:hover {
+  background-color: #083665;
+}
+
+/* Hide the default input box appearance */
+input[type="color"] {
+  appearance: none;
+  border: 1px solid black;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Apply the selected color as the background color of the circle */
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+input[type="color"]::-webkit-color-swatch {
+  border: none;
+  border-radius: 80%;
+}
